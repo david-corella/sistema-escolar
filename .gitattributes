@@ -1,0 +1,10 @@
+* text=auto
+*.cs text
+*.csproj text
+*.sln text
+*.config text
+*.resx text
+*.md text
+*.png binary
+*.jpg binary
+*.ico binary
