@@ -82,3 +82,25 @@ with field validation and event handling.
 ### Contents
 
 - `images/` — database diagrams and application screenshots.
+
+---
+
+## Galería / Gallery
+
+![sistema-escolar 1](images/app-01.png)
+
+![sistema-escolar 2](images/db-01.png)
+
+![sistema-escolar 3](images/db-02.png)
+
+![sistema-escolar 4](images/db-03.png)
+
+![sistema-escolar 5](images/db-04.png)
+
+![sistema-escolar 6](images/db-05.png)
+
+![sistema-escolar 7](images/db-06.png)
+
+![sistema-escolar 8](images/db-07.png)
+
+![sistema-escolar 9](images/db-08.png)
