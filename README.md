@@ -1,63 +1,84 @@
 # SistemaEscolar
 
-Sistema de gestión escolar de escritorio desarrollado en **C# (Windows Forms)** sobre
-**.NET Framework 4.7.2**, con persistencia en **SQL Server**. Proyecto académico de la materia de
-Desarrollo de Software (UNISON).
+> **ES:** Sistema de gestión escolar de escritorio (C# / Windows Forms + SQL Server).
+> **EN:** Desktop school management system (C# / Windows Forms + SQL Server).
 
-## Funcionalidad
+![Ventana principal](images/app-01.png)
+
+---
+
+## Español
+
+### Descripción
+
+Sistema de gestión escolar de escritorio desarrollado en **C# (Windows Forms)** sobre **.NET Framework
+4.7.2**, con persistencia en **SQL Server**. Proyecto de la materia de Desarrollo de Sistemas III.
 
 Dos grupos de módulos, cada uno contra su propia base de datos:
 
-- **Catálogos** (`Catalogos`): `País`, `Estado`, `Ciudad`, `Estatus`, `Carrera`, `Materia`, `Aula`.
-- **Tablas** (`Tablas`): `Alumno`, `Grupo`, `Académico` y `Reinscripción`.
+- **Catálogos** (`Catalogos`): País, Estado, Ciudad, Estatus, Carrera, Materia, Aula.
+- **Tablas** (`Tablas`): Alumno, Grupo, Académico y Reinscripción.
 
-Cada formulario implementa operaciones **CRUD** (Altas, Bajas, Consultas y Actualizaciones)
-integradas con controles de Windows Forms (`DataGridView`, `ComboBox`, `TextBox`), con validación de
-campos y manejo de eventos de interfaz.
+Cada formulario implementa operaciones **CRUD** integradas con controles de Windows Forms
+(`DataGridView`, `ComboBox`, `TextBox`), con validación de campos y manejo de eventos.
 
-## Tecnologías
+### Integrantes (creadores)
 
-- **Lenguaje:** C#
-- **UI:** Windows Forms
-- **Framework:** .NET Framework 4.7.2
-- **Base de datos:** SQL Server (Microsoft.Data.SqlClient)
-- **IDE:** Visual Studio 2022
+- David Antonio López Corella
+- Daniela Sandoval López
 
-## Requisitos
+**Materia:** Desarrollo de Sistemas III · **Maestro:** Lev David Valenzuela López · **Universidad de Sonora**
 
-- Windows 10/11
-- [Visual Studio 2022](https://visualstudio.microsoft.com/) con la carga de trabajo
-  **"Desarrollo de escritorio con .NET"**
-- [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-downloads) (instancia
-  `SQLEXPRESS`) y SQL Server Management Studio (opcional)
+### Tecnologías
 
-## Base de datos
+- C# · Windows Forms · .NET Framework 4.7.2 · SQL Server (Microsoft.Data.SqlClient) · Visual Studio 2022
 
-El proyecto espera **dos bases de datos**: `Catalogos` y `Tablas`.
+### Requisitos y ejecución
 
-1. Crea ambas bases en tu instancia de SQL Server Express.
-2. Ejecuta el script de estructura correspondiente (tablas y catálogos).
-3. Ajusta la cadena de conexión si tu instancia no es `localhost\SQLEXPRESS`. Está definida al inicio
-   de cada formulario:
+1. Windows + [Visual Studio 2022](https://visualstudio.microsoft.com/) (carga "Desarrollo de escritorio con .NET").
+2. [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-downloads) con las bases **Catalogos** y **Tablas**.
+3. Ajusta la cadena de conexión (`Server=localhost\SQLEXPRESS; ...`) al inicio de cada formulario.
+4. Abre `SistemaEscolar.sln` y ejecuta con **F5**.
 
-   ```csharp
-   public string ConexionCatalogos = "Server=localhost\\SQLEXPRESS;"
-                                   + " Database=Catalogos;"
-                                   + " Integrated Security=True; "
-                                   + " TrustServerCertificate=True";
-   ```
+### Contenido
 
-   > Nota: la cadena se repite en cada formulario. Una mejora pendiente es centralizarla en un único
-   > helper o en `App.config`.
+- `images/` — diagramas de la base de datos y capturas de la aplicación.
 
-## Compilar y ejecutar
+---
 
-1. Abre `SistemaEscolar.sln` en Visual Studio 2022.
-2. Restaura los paquetes NuGet (Visual Studio lo hace automáticamente al compilar).
-3. Conecta tu instancia de SQL Server Express con las bases `Catalogos` y `Tablas`.
-4. Compila y ejecuta con **F5** (o `Ctrl+F5`).
+## English
 
-## Autor
+### Description
 
-**David Corella** — Ingeniero en Sistemas de Información (UNISON).
-Portafolio: <https://david-corella.github.io/>
+Desktop school management system built in **C# (Windows Forms)** on **.NET Framework 4.7.2**, with
+**SQL Server** persistence. A project for the Software Systems Development III course.
+
+Two module groups, each backed by its own database:
+
+- **Catalogs** (`Catalogos`): País, Estado, Ciudad, Estatus, Carrera, Materia, Aula.
+- **Tables** (`Tablas`): Alumno, Grupo, Académico, Reinscripción.
+
+Every form implements **CRUD** wired to Windows Forms controls (`DataGridView`, `ComboBox`, `TextBox`),
+with field validation and event handling.
+
+### Authors (creators)
+
+- David Antonio López Corella
+- Daniela Sandoval López
+
+**Course:** Software Systems Development III · **Lecturer:** Lev David Valenzuela López · **University of Sonora**
+
+### Tech
+
+- C# · Windows Forms · .NET Framework 4.7.2 · SQL Server (Microsoft.Data.SqlClient) · Visual Studio 2022
+
+### Requirements & run
+
+1. Windows + [Visual Studio 2022](https://visualstudio.microsoft.com/) (".NET desktop development" workload).
+2. [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-downloads) with the **Catalogos** and **Tablas** databases.
+3. Adjust the connection string (`Server=localhost\SQLEXPRESS; ...`) at the top of each form.
+4. Open `SistemaEscolar.sln` and run with **F5**.
+
+### Contents
+
+- `images/` — database diagrams and application screenshots.
